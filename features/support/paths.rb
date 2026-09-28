@@ -20,6 +20,9 @@ module NavigationHelpers
     when /the show page/
       '/show'
 
+    when /the new game page/
+      '/new'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

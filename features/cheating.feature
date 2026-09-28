@@ -15,3 +15,18 @@ Scenario: navigate to win page
   When I try to go to the URL "/win"
   Then I should be on the show page
   And the word should read "-----"
+
+Scenario: cannot access win page before starting a game
+  Given I am on the home page
+  When I try to go to the URL "/win"
+  Then I should be on the new game page
+
+Scenario: cannot access lose page before starting a game
+  Given I am on the home page
+  When I try to go to the URL "/lose"
+  Then I should be on the new game page
+
+Scenario: cannot show a game before starting one
+  Given I am on the home page
+  When I try to go to the URL "/show"
+  Then I should be on the new game page
